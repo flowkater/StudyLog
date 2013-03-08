@@ -6,6 +6,7 @@ describe "Threeorfive" do
 
 	describe "less_method" do
 		it "ten_less" do
+			# threeorfive.ten_less.should = 23
 			threeorfive.ten_less.should == 233168
 		end
 
