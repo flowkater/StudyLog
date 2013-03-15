@@ -22,23 +22,41 @@ class Palindrome
 		# arr.sort.last
 		# => 7.xx sec
 
-		arr = []
-		(100...1000).each do |a|
-			(100...1000).reverse_each do |b|
-				if is_palindrome(a * b)
-					arr << a * b 
-					break
-				end
-			end
-		end
-		arr.sort.last
+		# arr = []
+		# (100...1000).each do |a|
+		# 	(100...1000).reverse_each do |b|
+		# 		if is_palindrome(a * b)
+		# 			arr << a * b 
+		# 			break
+		# 		end
+		# 	end
+		# end
+		# arr.sort.last
 		# => 5.xx sec
+
+		# max check
+		# result = 0
+		# (100...1000).reverse_each do |a|
+		# 	(100...1000).reverse_each do |b|
+		# 		if a*b > result && is_palindrome(a*b) 
+		# 			result = a * b
+		# 		end
+		# 	end
+		# end
+		# result
+		#
+		# max check refactoring
+		# 임영수 대표님 아이디어 구현 결과 0.18초~0.19초
+		# 굿굿
+		result = 0
+		(100...1000).reverse_each { |a| (100...1000).reverse_each {|b| result = a * b if a*b > result && is_palindrome(a*b)}}
+		result
 	end
 
 	# X
-	def lim
-		(100000...1000000).reverse_each do |p|
-			return p if is_palindrome(p)
-		end
-	end
+	# def lim
+	# 	(100000...1000000).reverse_each do |p|
+	# 		return p if is_palindrome(p)
+	# 	end
+	# end
 end
