@@ -38,6 +38,7 @@ class Palindrome
 		# result = 0
 		# (100...1000).reverse_each do |a|
 		# 	(100...1000).reverse_each do |b|
+		# 		break if a * b < result # => 요거 추가로 해주니 - 0.6 초
 		# 		if a*b > result && is_palindrome(a*b) 
 		# 			result = a * b
 		# 		end
@@ -49,7 +50,7 @@ class Palindrome
 		# 임영수 대표님 아이디어 구현 결과 0.18초~0.19초
 		# 굿굿
 		result = 0
-		(100...1000).reverse_each { |a| (100...1000).reverse_each {|b| result = a * b if a*b > result && is_palindrome(a*b)}}
+		(100...1000).reverse_each { |a| (100...1000).reverse_each {|b| break if (n=a * b) < result; result = n if n > result && is_palindrome(n)}}
 		result
 	end
 
