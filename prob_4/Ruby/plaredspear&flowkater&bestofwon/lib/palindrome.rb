@@ -1,5 +1,4 @@
 class Palindrome
-
 	def is_palindrome(n)
 		# max_digit = n.to_s.length
 		# num = n.to_s.split(//)
