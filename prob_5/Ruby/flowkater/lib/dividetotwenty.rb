@@ -13,9 +13,7 @@ class Dividetotwenty
 	end
 
 	def arr_lcm(n)
-		arr = []
-		(1..n).each{|x| arr << x}
-		arr.inject(1) {|lc,n| lcm(lc, n)}
+		(1..n).inject {|lc,n| lcm(lc, n)}
 	end
 
 	# Float::INFINITY -> +1.0/0.0ksms
