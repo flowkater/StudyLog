@@ -42,4 +42,23 @@ describe "Dividetotwenty" do
 	end
 
 
+
+	describe "get_divisor" do
+
+		it "yes" do
+			divide.get_divisor(20).should == 232792560
+		end
+
+	end
+
+	describe "max_exp_in_range" do
+		it "yes" do
+			divide.max_exp_in_range(2, 3).should == 2
+			divide.max_exp_in_range(2, 5).should == 4
+			divide.max_exp_in_range(2, 20).should == 16
+		end
+	end
+
+
+
 end
