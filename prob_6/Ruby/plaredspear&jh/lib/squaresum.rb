@@ -29,8 +29,8 @@ class SquareSum
   end
 
   def sum_square(range)
-    sum = (1..range).inject{ |sum, num| sum += num }
-    sum * sum
+    (1..range).inject{ |sum, num| sum += num } ** 2
+    # sum * sum
   end
 
   def subject(n)
