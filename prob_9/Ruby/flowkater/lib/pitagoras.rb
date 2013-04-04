@@ -30,7 +30,8 @@ class Pitagoras
 	end
 
 	# 40은 1000의 약수
-	# [8,15,17]
+	# [8,15,17] 의 합이 40
+	# (a + b + c) * k = total
 	# 40k = 1000; k = 25
 	# [8*k, 15*k, 17*k ]
 	# def divisor_test
