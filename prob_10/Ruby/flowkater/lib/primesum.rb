@@ -45,12 +45,35 @@ class Primesum
 		# arr
 	# end
 
-	def sum_of_primes(n)
+	def sum_of_arathos(n)
 		primes = [2]
 		sieve = Array.new((n+1)/2, true)
 		3.step( Math.sqrt(n).floor, 2){|i| if sieve[i/2] then (i * 3/2).step(n/2,i) {|j| sieve[j]=false} else next end}
 		1.upto((n+1)/2){|i| if sieve[i] then primes << 2 * i + 1 else next end}
 		primes.inject(:+)
 	end
-	
+
+	def sum_of_prime(n)
+		sieve = Array.new( ( n + 1 ) / 2, true)
+
+		3.step(Math.sqrt(n).floor, 2) do |i|
+
+			next unless sieve[ i / 2 ]
+
+			( i * 3 / 2 ).step( n / 2, i){ |j| sieve[j] = false}
+
+		end
+
+		primes = [2]
+
+		1.upto((n+1)/2) do |i|
+
+			next unless sieve[i]
+
+			primes << 2 * i + 1
+
+		end
+
+	end
+
 end
