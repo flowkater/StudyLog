@@ -21,7 +21,9 @@ describe "Primesum" do
 		it "eratos_sum" do
 			# primesum.sum_of_primes(10).should == 17
 			# primesum.lessthan_sum(1000).should == 76127
-			primesum.sum_of_primes(2000000).should == 142913828922
+			# primesum.sum_of_isprime(2000000).should == 142913828922
+			primesum.sum_of_erathos(2000000).should == 142913828922
+			# primesum.primes(2000000).should == 142913828922
 		end
 	end
 end

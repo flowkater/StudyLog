@@ -71,8 +71,6 @@ class Lattice
 	# 	# @array[0][19] * @array[1][18] * @array[2][17] * @array[3][16]
 	# end
 
-	
-
 	# def input_test(s)
 		# s.split.length
 		# 0.upto(19){|i| 0.upto(19) {|j| print @array[i][j]; puts "" }}
