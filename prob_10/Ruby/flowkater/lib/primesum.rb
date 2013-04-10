@@ -91,5 +91,4 @@ class Primesum
 		end
 
 	end
-
 end
