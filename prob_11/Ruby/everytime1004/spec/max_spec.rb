@@ -50,11 +50,12 @@ describe "Max" do
       max.diagonal_right_max(max.make_array(arr)).should == 40304286
     end
     it "diagonal_left" do
-      max.diagonal_left_max(max.make_array(arr)).should == 40304286
+      max.diagonal_left_max(max.make_array(arr)).should == 70600674
     end
   end
 
   # describe 'Get max' do
+  
   #   it 'get max' do
   #     max.max(1, 2, 3, 4).should == 4
   #     max.max(max.horizontal_max(max.make_array(arr)), max.vertical_max(max.make_array(arr)), max.diagonal_right_max(max.make_array(arr)), max.diagonal_left_max(max.make_array(arr))).should == 51267216

@@ -1,11 +1,10 @@
 class Max
 
 	def make_array(val)
-		tmp = val.split(" ").collect{|x| x.to_i}
 		arr = []
 		tmp_arr = []
 
-		tmp.each_with_index do |val, index|
+		val.split(" ").collect{|x| x.to_i}.each_with_index do |val, index|
 			tmp_arr << val
 			if ("#{index}".to_i+1) % 20 == 0
 				arr << tmp_arr 
@@ -45,8 +44,8 @@ class Max
 
 	def diagonal_right_max(arrs)
 		max = 0
-		(0..16).each do |k|
-			(0..16).each do |i|
+		(0..16).each do |i|
+			(0..16).each do |k|
 				tmp = arrs[i][k] * arrs[i+1][k+1] * arrs[i+2][k+2] * arrs[i+3][k+3]
 				max = tmp if max < tmp
 			end
@@ -56,9 +55,9 @@ class Max
 
 	def diagonal_left_max(arrs)
 		max = 0
-		(1..17).each do |k|
-			(1..17).each do |i|
-				tmp = arrs[-i][-k] * arrs[-i-1][-k-1] * arrs[-i-2][-k-2] * arrs[-i-3][-k-3]
+		(0..16).each do |i|
+			(1..17).each do |k|
+				tmp = arrs[i][-k] * arrs[i+1][-k-1] * arrs[i+2][-k-2] * arrs[i+3][-k-3]
 				max = tmp if max < tmp
 			end
 		end
@@ -75,4 +74,3 @@ class Max
 	end
 	
 end
-

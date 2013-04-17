@@ -1,7 +1,7 @@
 class Pythagoras
 
 	def pythagoras?(n)
-		(1..n).each do |num|
+		(2..n).each do |num|
 			(num+1..n).each do |num2|
 				c = n - (num+num2)
 				if c**2 == (num**2 + num2**2)

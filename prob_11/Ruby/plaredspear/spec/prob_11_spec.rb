@@ -29,7 +29,7 @@ describe "prob_11" do
   describe "method" do
 
     it "be 4X4" do
-      prob.split_vector(arr).should == true
+      prob.split_vector(arr).should == 70600674
     end
   end
 
