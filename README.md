@@ -2,6 +2,8 @@
 
 [프로젝트 오일러 문제 보러가기](http://euler.synap.co.kr/prob_list.php)
 
+## Be a Rubyist Ruby 스터디 2차 종료 ##
+
 ### 2013/4/10 회고
 - status : 문제 11번까지 풀이 완료
 
