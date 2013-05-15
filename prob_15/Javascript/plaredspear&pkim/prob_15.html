@@ -1,0 +1,48 @@
+<html>
+<div id="textDivI"></div>
+<div id="textDivJ"></div>
+<div id="textDivResult"></div>
+
+<script type="text/javascript">
+  var divI = document.getElementById("textDivI");
+  var divJ = document.getElementById("textDivJ");
+  var divResult = document.getElementById("textDivResult");
+
+  var lattice_size = 21;
+
+  var array = new Array();
+  var i, j = 0
+
+  // Row
+  for (i=0; i<lattice_size; i++) {
+    array[i] = new Array();
+
+    if (i==0) {
+      // Column
+      for (j=0; j<lattice_size; j++) {
+        array[i][j] = 1;
+      }
+
+    } else {
+      // Column
+      for (j=0; j<lattice_size; j++) {
+
+        if (j==0) {
+          array[i][j] = 1;
+
+        } else {
+          array[i][j] = array[i-1][j] + array[i][j-1]
+
+        }
+      }
+    }
+  }
+
+  divI.textContent = array[2][1];
+  divJ.textContent = array[lattice_size-1][lattice_size-1];
+  divResult.textContent = 0;
+
+  // 정답 : 137846528820
+
+</script>
+</html>
