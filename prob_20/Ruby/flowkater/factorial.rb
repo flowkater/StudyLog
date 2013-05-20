@@ -1,0 +1,1 @@
+puts (1..100).inject(){|result,x| result *= x}.to_s.split('').collect(&:to_i).inject(:+)
