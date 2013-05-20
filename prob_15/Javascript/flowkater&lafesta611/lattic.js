@@ -7,6 +7,7 @@
  abba
  baab
  20 x 20 은 결과적으로 20개의 a와 20개의 b의 조합을 구하는 문제이다.
+ github test
 */
 
 a = 20;
