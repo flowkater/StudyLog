@@ -19,7 +19,6 @@ function factorial(n){
 
 	for(var i = 1 ; i <= n; i++){
 		result = multiple_tos(result, i.toString());
-		document.writeln(result + " ");
 	}
 
 	return result;
@@ -85,13 +84,18 @@ function multi_arr(a_arr, b, carry){
 	// step = (parseInt(step.split('').reverse().join('')) + carry).toString();
 	carry = carry.split('').reverse().join('');	
 
-	step = sum_arr(step, carry);
+	// step = sum_arr(step, carry);
+
+	var s_arr = sum_arr(step,carry);
+	step = s_arr[0];
+
+	carry_a = carry_a + s_arr[1];
 
 	if(carry_a !== 0){
 		step = carry_a + step;
 	}
 
-	document.writeln(step + "<br>");
+	// document.writeln(step + "<br>");
 
 	// var multi = (parseInt(stepa) + carry).toString().split('');
 	return step.split('');
@@ -118,7 +122,7 @@ function sum_arr(step, carry){
 		}	
 	}
 
-	return result.split('').reverse().join('');
+	return [result.split('').reverse().join(''), sum_carry];
 }
 
 // document.writeln("10! -> 3628800 : " + (factorial(100)) + "<br/>");
@@ -130,10 +134,10 @@ function sum_arr(step, carry){
 
 // document.writeln("============================<br/>");
 
-// document.writeln(factorial(15) + "<br/>");
-// document.writeln("1307674368000" + "<br/>");
+document.writeln(factorial(15) + "<br/>");
+document.writeln("1307674368000" + "<br/>");
 
-// document.writeln("============================<br/>");
+document.writeln("============================<br/>");
 
 // document.writeln(multiple_tos('87178291200','15') + "<br/>");
 
@@ -157,22 +161,22 @@ function sum_arr(step, carry){
 
 // document.writeln("============================<br/>");
 
-// document.writeln(factorial(20) + "<br/>");
-// document.writeln("2432902008176640000" + "<br/>");
+document.writeln(factorial(20) + "<br/>");
+document.writeln("2432902008176640000" + "<br/>");
 
-// document.writeln("============================<br/>");
+document.writeln("============================<br/>");
 
 // document.writeln(factorial(30) + "<br/>");
 // document.writeln("265252859812191058636308480000000" + "<br/>");
 
 // document.writeln("============================<br/>");
 
-// document.writeln(factorial(100) + "<br/>");
-// document.writeln(print_result + "<br/>");
+document.writeln(factorial(100) + "<br/>");
+document.writeln(print_result + "<br/>");
 
-// document.writeln("============================<br/>");
+document.writeln("============================<br/>");
 
-// document.writeln(sum(100) + " == 648<br/>");
+document.writeln(sum(100) + " == 648<br/>");
 // document.writeln(sum_arr(['3','2','3','2','3','2','3','2','3','2','3'],['9','9']) + "<br/>");
 // document.writeln(factorial(100) + "<br/>");
 // document.writeln(multi_arr(['3','2'],'5',0) + "<br/>");
