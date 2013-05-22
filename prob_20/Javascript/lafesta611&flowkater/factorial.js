@@ -1,5 +1,6 @@
 var print_result = "93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000";
 var test_result = "3628800";
+
 function factorial(n){
 	// var result = [];
 	// for(var j = n; j > 0; j-=2){
@@ -61,7 +62,7 @@ function multiple_tos(a,b){
 		
 		carry = multi.join('');
 	}
-	return carry + result.split('').reverse().join('');;
+	return carry + result.split('').reverse().join('');
 }
 
 
