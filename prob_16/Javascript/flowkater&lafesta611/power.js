@@ -59,9 +59,11 @@ document.writeln(Math.pow(2,15) + " -> 32768<br>");
 document.writeln(Math.pow(2,1000) + " error <br>");
 
 
-document.writeln(power(1000) + "");
+document.writeln(power(1000) + "<br>");
+document.writeln("=======<br>");
 
 
+document.writeln(new BigInt(1));
 
 
 
