@@ -1,0 +1,56 @@
+<html>
+<body>
+  <script>
+		// 2 의 1000 승에 각 자리수를 더하라...
+		var log = function( x ) {
+				document.write(x + "<br/>");
+		}
+				
+		function oiler_16_onlypow( n ){
+		
+			var val = Math.pow( 2, n );
+			
+			var str = '' + val ;
+			var ret = 0;
+			for( i = 0 ; i < str.length ; ++ i ){
+				ret += str.substring( i, i + 1 ) - '0';
+			}
+			
+			return ret;
+		
+		}
+		
+		function arr_str_sum ( num ) {
+			var j = 0;
+			for( var i = 0 ; i < num.length ; ++ i ){
+				
+				var tmp = num[i] * 2 + j;
+				j = (tmp - (tmp % 10) ) / 10;
+				num[i] = tmp % 10;
+
+			}
+			
+			if( j > 0 ) {
+				num.push( j );
+			}
+			
+			return num;
+		}
+		
+		function oiler16_str_sum( mux ){
+			var start = [1];
+			var ret = 0;
+			for( var i = 0 ; i < mux ; ++ i ){
+				arr_str_sum( start );
+			}
+			
+			for( var j = 0 ; j < start.length; ++ j ){
+				ret = ret + start[j];
+			}
+			return ret;
+		}
+		
+		log( oiler16_str_sum( 1000 ) );
+	</script>
+</body>
+</html>
