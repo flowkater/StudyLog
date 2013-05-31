@@ -35,9 +35,9 @@ describe "English" do
 			eng.count(115).should == 20
 		end
 
-		it "number test" do
+		it "number result" do
 			eng.tonum(20).should == 112
-			eng.tonum(1000).should == 113
+			eng.tonum(1000).should == 21124
 		end
 	end
 end
