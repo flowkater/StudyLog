@@ -1,15 +1,67 @@
 class Tripath
-	attr_accessor :testarr
 
-	def initialize(filename, testarr = [])
+	attr_accessor :testarr, :memo
+
+	def initialize(filename, testarr = [], memo = {})
 
 		@testarr = testarr
+		@memo = memo
 
 		File.open("./lib/#{filename}", 'r') do |f|
 			while line = f.gets
 				@testarr << line.split.collect { |s| s.to_i }
 			end
 		end
+
+		@memo[[0,0]] = @testarr[0][0]
+	end
+
+	def recur_check(x, y)
+		# if x == 0
+		# 	@testarr[0][0]
+		# elsif y ==
+			
+		# puts "(#{x},#{y})"
+		return @testarr[0][0] if x == 0
+		return @testarr[x][y] + recur_check(x-1, y) if y == 0
+		return @testarr[x][y] + recur_check(x-1, y-1) if @testarr[x].length - 1 == y
+		return @testarr[x][y] + max(recur_check(x-1, y-1), recur_check(x-1,y))
+	end
+
+	def recur_memo_check(x, y)
+		if x == 0
+			return @memo[[0,0]]
+		elsif @memo[[x,y]]
+			return @memo[[x,y]]
+		else
+			if y == 0
+				return @memo[[x,y]] = @testarr[x][y] + recur_memo_check(x-1, y)
+			elsif @testarr[x].length - 1 == y
+				return @memo[[x,y]] = @testarr[x][y] + recur_memo_check(x-1, y-1)
+			else
+				return @memo[[x,y]] = @testarr[x][y] + max(recur_memo_check(x-1, y-1), recur_memo_check(x-1,y))
+			end
+		end
+	end
+
+	def max(a,b)
+		a > b ? a : b
+	end
+
+	def recur_pic
+		arr = []
+		(0...@testarr.last.length).each do |y|
+			arr << recur_check(@testarr.length - 1,y)
+		end
+		arr.max
+	end
+
+	def recur_memo_pic
+		arr = []
+		(0...@testarr.last.length).each do |y|
+			arr << recur_memo_check(@testarr.length - 1,y)
+		end
+		arr.max
 	end
 
 
