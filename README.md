@@ -1,8 +1,10 @@
-## Be a Rubyist ProjectEuler_kr 풀이 ##
+## Be a Rubyist 스터디 회고록 ##
 
 [프로젝트 오일러 문제 보러가기](http://euler.synap.co.kr/prob_list.php)
 
 ## 4차 Scala 스터디 시작 ##
+
+[Scala 스터디 회고](https://github.com/flowkater/ProjectEuler_kr/tree/master/scala)
 
 ## 3차 자바스크립트 스터디 종료 ##
 
