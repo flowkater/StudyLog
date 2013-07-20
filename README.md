@@ -2,7 +2,7 @@
 
 [프로젝트 오일러 문제 보러가기](http://euler.synap.co.kr/prob_list.php)
 
-## 4차 Scala 스터디 종료 ##
+## 4차 Scala 스터디 시작 ##
 
 ## 3차 자바스크립트 스터디 종료 ##
 
