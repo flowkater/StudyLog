@@ -89,6 +89,8 @@ object RectangleLikeTest extends App {
 2.
 
 solute SBS )
+
+```
   class OrderedPoint( n:java.awt.Point ) extends scala.math.Ordered[OrderedPoint] {
     def compare(that: OrderedPoint) = {
     	(n.x * 1024 + n.y ) - ( that.n.x * 1024 + that.n.y )
@@ -104,7 +106,7 @@ solute SBS )
   for( tt <- x ){
 	  println( " "  + tt )
   }
-	
+```	
 
 --------------------------------------------------------------------------------------------------------------------
 3.
