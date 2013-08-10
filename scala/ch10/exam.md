@@ -6,7 +6,7 @@
 
 
 solute SBS ) -- 1번 문제는 쉬울거다라는 가정을 하고 푼 해법입니다.
-
+```
    trait RectangleLike extends java.awt.geom.Ellipse2D.Double {
   	def translate( x:Int , y:Int )={
 			// Ellipse2D 에 상응 하는 translate 를 구현 할 수 있도록 한다.
@@ -24,10 +24,11 @@ this.y += y;
   val egg = new java.awt.geom.Ellipse2D.Double(5, 10, 20, 30) with RectangleLike
   egg.translate(10,-10);
   egg.grow(10,20);
-
+```
 
 
 solute Peter )
+```
 val egg = new java.awt.geom.Ellipse2D.Double(5, 10, 20, 30) with RectangleLike
 egg.translate(10, -10)
 egg.grow(10, 20)]
@@ -56,8 +57,10 @@ object Main extends App {
   println(egg.getWidth())
   println(egg.getHeight())
 }
+```
 
 solute Minki )
+```
 (https://github.com/calinburloiu/Scala-for-the-Impatient--Exercises/tree/master/src/exercises)
 import java.awt.geom.RectangularShape
 
@@ -79,7 +82,7 @@ object RectangleLikeTest extends App {
   egg.grow(.3, .4)
   println("%f %f %f %f".format(egg.getX, egg.getY, egg.getWidth, egg.getHeight))
 }
-
+```
 
 
 --------------------------------------------------------------------------------------------------------------------
@@ -112,6 +115,8 @@ solute SBS )
 4.
 
 solute SBS )
+
+```
   trait Logger {
     def log( msg: String ){}
   }
@@ -146,7 +151,7 @@ solute SBS )
   
   val ttt = new { override val crypt_key:Int = 5 } with  sample_class( "crypt key is 5 " ) with ConsoleLogger with CryptLogger;
   ttt.run();
-
+```
 
 
 --------------------------------------------------------------------------------------------------------------------
@@ -154,6 +159,7 @@ solute SBS )
 
 solute SBS )
 
+```
 trait PropertyChangeSupport_ext {
     val pcs:java.beans.PropertyChangeSupport = new java.beans.PropertyChangeSupport ();
     
@@ -177,6 +183,7 @@ trait PropertyChangeSupport_ext {
   
   val point_test = new PointWithPCS;
   point_test.setLocation(10, 20);
+```
 
 --------------------------------------------------------------------------------------------------------------------
 6.
