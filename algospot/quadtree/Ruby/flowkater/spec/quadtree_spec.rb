@@ -13,6 +13,13 @@ describe "Quadtree" do
 			q.flip("xxwwwbxwxwbbbwwxxxwwbbbwwwwbb").should == "xxwbxwwxbbwwbwbxwbwwxwwwxbbwb"
 		end
 
+		it "flip recursive" do
+			q.flip_recursive("w").should == "w"
+			q.flip_recursive("xwwbb").should == "xbbww"
+			q.flip_recursive("xbwxwbbwb").should == "xxbwwbbbw"
+			q.flip_recursive("xxwwwbxwxwbbbwwxxxwwbbbwwwwbb").should == "xxwbxwwxbbwwbwbxwbwwxwwwxbbwb"
+		end
+
 		it "last x index" do
 			q.last_x_index("w".split("")).should == -1
 			q.last_x_index("xwwbb".split("")).should == 0

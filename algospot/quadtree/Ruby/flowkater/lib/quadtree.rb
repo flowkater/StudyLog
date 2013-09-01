@@ -1,4 +1,23 @@
 class Quadtree
+
+	def flip_recursive(str)
+		return str unless str.include? "x"
+		rarr = str.reverse.split("")
+		flip_arr(rarr)
+	end
+
+	def flip_arr(arr)
+		return arr.join.reverse unless (index = arr.index("x"))
+		arr[index-4, 5] = reverse_swap(arr[index-4, 5]).join
+		flip_arr(arr)
+	end
+
+	def reverse_swap(arr)
+		arr[0],arr[2] = arr[2],arr[0]
+		arr[1],arr[3] = arr[3],arr[1]
+		arr
+	end
+
 	def flip(str)
 		arr = str.split("")
 
