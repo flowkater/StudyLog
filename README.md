@@ -1,4 +1,4 @@
-# StudyLog 스터디 회고록 #
+# StudyLog 회고록 #
 
 ## 4차 Scala 스터디 ##
 
@@ -19,3 +19,7 @@
 ## Project Euler ##
 
 ## Algospot ##
+
+## Pattern 스터디 ##
+
+[패턴 스터디 회고]()
