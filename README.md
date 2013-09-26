@@ -26,4 +26,4 @@
 
 ## Pattern 스터디 ##
 
-[패턴 스터디 회고]()
+[패턴 스터디 회고](https://github.com/flowkater/StudyLog/tree/master/somaPattern)
