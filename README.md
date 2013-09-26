@@ -10,6 +10,6 @@
 
 ## Be a Rubyist Ruby 스터디 2차 ##
 
-[Ruby로 풀어보는 Project Euler 스터디 회고]()
+[Ruby로 풀어보는 Project Euler 스터디 회고](https://github.com/flowkater/StudyLog/tree/master/Ruby)
 
 ## Be a Rubyist Rails 스터디 1차 ##
