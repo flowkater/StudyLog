@@ -18,7 +18,11 @@
 
 ## Project Euler ##
 
+[Project Euler](https://github.com/flowkater/StudyLog/tree/master/ProjectEuler_KR)
+
 ## Algospot ##
+
+[algospot](https://github.com/flowkater/StudyLog/tree/master/algospot)
 
 ## Pattern 스터디 ##
 
