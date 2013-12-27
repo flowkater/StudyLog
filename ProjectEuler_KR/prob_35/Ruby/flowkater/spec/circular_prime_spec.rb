@@ -28,5 +28,9 @@ describe "Circular Prime" do
 			# cp.is_circular_prime_in_range(1000).should == [2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97, 113, 131, 197, 199, 311, 337, 373, 719, 733, 919, 971, 991]
 			cp.is_circular_prime_in_range(1000000).should == 55
 		end
+
+		it "eratos primes" do
+			# cp.erathos_primes(1000000).should == []
+		end
 	end
 end
