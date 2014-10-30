@@ -15,7 +15,7 @@ end
 
 arr = []
 
-(2..10000).each do |i|
+(2..1000000).each do |i|
 	result = true
 	i.to_s.split(//).permutation(i.to_s.length).map {|j| j.join.to_i}.each do |j|
 		if(not_prime?(j, primes))

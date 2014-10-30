@@ -8,33 +8,26 @@
 # 1, 2, 5, 10, 20, 50, 100, 200
 # 200 ?
 # 점화식을 찾아내라.
+# 736824
 class EnglandMoney
-	def test_value
-		1*100 + 1*50 + 2*20 + 1*5 + 1*2 + 3*1
+	MONEY_OPT = [2,5,10,20,50,100,200]
+	SUM = (1..201).collect { |i| 1 }
+
+	# 0.002 초
+	def england_money_count_dp
+		MONEY_OPT.each{|i|(i..200).each { |j| SUM[j] += SUM[j - i] }}
+		SUM[-1]
 	end
 
-	def just_all_loop
+	MONEY = [200,100,50,20,10,5,2,1]
+	# 0.7 초
+	def england_money_count(i = 0, sum = 200)
 		count = 0
-		(0..1).each do |p2|
-			(0..2).each do |p1|
-				(0..4).each do |f50|
-					(0..10).each do |f20|
-						(0..20).each do |f10|
-							(0..40).each do |f5|
-								(0..100).each do |f2|
-									(0..200).each do |f1|
-										sum = f1 * 1 + f2 * 2 + f5 * 5 + f10 * 10 + f20 * 20 + f50 * 50 + p1 * 100 + p2 * 200
-										if sum == 200
-											count += 1
-										end
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
+		return count if i == MONEY.length
+		(sum / MONEY[i]).downto(0) {|j| (result = MONEY[i] * j) == sum ? count += 1 : count += england_money_count(i+1, sum - result)}
 		count
 	end
 end
+
+e = EnglandMoney.new
+puts e.england_money_count_dp
